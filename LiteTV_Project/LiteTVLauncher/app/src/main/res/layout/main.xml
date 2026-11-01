@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:paddingLeft="48dp" android:paddingRight="48dp" android:paddingTop="28dp" android:paddingBottom="20dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:gravity="center_vertical" android:background="@drawable/bar_bg" android:padding="14dp">
+        <TextClock android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="EEE, d MMM  h:mm a"
+            android:format24Hour="EEE, d MMM  HH:mm" android:textColor="#FFFFFF" android:textSize="18sp"/>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <LinearLayout android:layout_width="170dp" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/ramTxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#B8C0CC" android:textSize="12sp" android:singleLine="true"/>
+            <ProgressBar android:id="@+id/ramBar" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="4dp" android:progressDrawable="@drawable/progress" android:max="100"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="170dp" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:orientation="vertical">
+            <TextView android:id="@+id/stoTxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#B8C0CC" android:textSize="12sp" android:singleLine="true"/>
+            <ProgressBar android:id="@+id/stoBar" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="4dp" android:progressDrawable="@drawable/progress" android:max="100"/>
+        </LinearLayout>
+        <TextView android:id="@+id/netTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:textColor="#B8C0CC" android:textSize="12sp"/>
+    </LinearLayout>
+    <GridView android:id="@+id/grid" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="24dp"
+        android:numColumns="6" android:horizontalSpacing="12dp" android:verticalSpacing="12dp" android:listSelector="@drawable/tile_focus"
+        android:drawSelectorOnTop="false" android:clipToPadding="false" android:scrollbars="none" android:fadingEdge="none"
+        android:overScrollMode="never" android:focusable="true" android:padding="6dp"/>
+</LinearLayout>
